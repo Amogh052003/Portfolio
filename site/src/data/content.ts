@@ -40,7 +40,7 @@ export const skills = [
   {
     title: "DevOps & Automation",
     items:
-      "Docker, Kubernetes, Helm, Jenkins, Terraform, Ansible, Azure DevOps",
+      "Docker, Kubernetes, Helm, Jenkins, Terraform, Ansible, ArgoCD, Azure Devops"
   },
   {
     title: "Programming & Scripting",
