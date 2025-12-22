@@ -3,13 +3,11 @@ import RevealSection from "@/components/RevealSection";
 
 export default function Profile() {
   return (
-    <section id="profile">
+    <section id="profile" className="scroll-mt-32">
       <RevealSection>
-        <div className="glass p-10 max-w-4xl space-y-3">
-          <h2 className="text-3xl font-semibold glow-text">
-            Profile
-          </h2>
-          <p className="text-[var(--text-muted)] leading-relaxed">
+        <div className="glass p-8 sm:p-10 max-w-4xl space-y-3">
+          <h2 className="text-3xl font-semibold glow-text">Profile</h2>
+          <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed">
             {profileText}
           </p>
         </div>

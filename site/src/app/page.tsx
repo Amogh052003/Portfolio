@@ -6,12 +6,12 @@ import ExpNEdu from "@/components/ExpNEdu";
 
 export default function Home() {
   return (
-    <main className="space-y-40 py-32">
+    <>
       <Hero />
       <Profile />
       <Skills />
       <Projects />
       <ExpNEdu />
-    </main>
+    </>
   );
 }

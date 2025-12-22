@@ -18,8 +18,7 @@ export default function RootLayout({
       <body className="font-montserrat antialiased">
         <Navbar />
         <ScrollIndicator />
-
-        <main className="mx-auto max-w-7xl px-6 md:px-10">
+        <main className="mx-auto max-w-7xl px-6 md:px-10 py-20 sm:py-28 space-y-24 sm:space-y-32">
           {children}
         </main>
       </body>
