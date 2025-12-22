@@ -22,7 +22,7 @@ export default function Projects() {
               </ul>
               {p.link && (
                 <a href={p.link} target="_blank" className="text-sm text-cyan-300">
-                  GitHub 🐙
+                  GitHub Link 
                 </a>
               )}
             </div>
