@@ -121,6 +121,18 @@ export const projects = [
 ];
 
 export const experience = [
+   {
+    role: "Devops Intern — Synthlane Technologies",
+    period: "Jan 2025 – Mar 2025",
+    bullets: [
+      "Worked with Kubernetes clusters to deploy and manage containerized applications using Helm charts.",
+      "Built and optimized Docker images using multi-stage builds and distroless images for production workloads.",
+      "Debugged and resolved pod failures, CrashLoopBackOff issues, and cluster scheduling problems.",
+      "Managed secrets and environment configurations using Infisical and GitHub Actions.",
+      "Implemented CI/CD pipelines to build, push, and deploy container images to Kubernetes environments.",
+      "Monitored cluster health and application logs using kubectl and cluster management tools."
+    ],
+  },
   {
     role: "Cloud Intern — Rooman Technologies",
     period: "Dec 2024 – Mar 2025",
