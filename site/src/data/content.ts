@@ -124,6 +124,7 @@ export const experience = [
    {
     role: "Devops Intern — Synthlane Technologies",
     period: "Jan 2025 – Mar 2025",
+    logo: "/logos/synthlane.png",
     bullets: [
       "Worked with Kubernetes clusters to deploy and manage containerized applications using Helm charts.",
       "Built and optimized Docker images using multi-stage builds and distroless images for production workloads.",
