@@ -23,6 +23,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="/Amogh_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            download
+            className="hover:text-white transition"
+          >
+            Resume
+          </a>
         </div>
 
         {/* Mobile Hint (no hamburger needed) */}

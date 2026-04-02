@@ -3,31 +3,68 @@ import RevealSection from "@/components/RevealSection";
 
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-32 space-y-10">
+    <section id="projects" className="scroll-mt-32 space-y-8">
       <RevealSection>
         <h2 className="text-3xl font-semibold glow-text">Selected Projects</h2>
       </RevealSection>
 
-      <div className="space-y-8">
-        {projects.map((p) => (
-          <RevealSection key={p.name}>
-            <div className="glass p-6 sm:p-8 space-y-4 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition">
-              <div className="h-1 w-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
-              <h3 className="text-xl font-semibold">{p.name}</h3>
-              <p className="text-sm text-cyan-300">{p.stack}</p>
-              <ul className="list-disc list-inside text-sm text-[var(--text-muted)]">
-                {p.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-              {p.link && (
-                <a href={p.link} target="_blank" className="text-sm text-cyan-300">
-                  GitHub Link 
-                </a>
-              )}
-            </div>
-          </RevealSection>
-        ))}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((p) => {
+          const tags = p.stack
+            .split("·")
+            .map((t: string) => t.trim())
+            .filter(Boolean);
+
+          const Card = p.link ? "a" : "div";
+
+          return (
+            <RevealSection key={p.name}>
+              <Card
+                {...(p.link
+                  ? {
+                      href: p.link,
+                      target: "_blank",
+                      rel: "noreferrer",
+                      "aria-label": `Open GitHub repo for ${p.name}`,
+                    }
+                  : {})}
+                className="glass block p-6 space-y-4 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(34,211,238,0.18)] transition"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-xs px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-300">
+                    {p.category}
+                  </span>
+                  <div className="h-1 w-14 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mt-2" />
+                </div>
+
+                <h3 className="text-lg font-semibold">{p.name}</h3>
+
+                <ul className="space-y-2 list-disc list-inside text-sm text-[var(--text-muted)]">
+                  {p.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-2">
+                  {tags.slice(0, 6).map((t: string) => (
+                    <span
+                      key={t}
+                      className="text-[11px] px-2 py-1 rounded-full border border-white/10 text-cyan-200"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {p.link && (
+                  <span className="inline-flex items-center text-sm text-cyan-300 hover:text-cyan-200 transition">
+                    View code →
+                  </span>
+                )}
+              </Card>
+            </RevealSection>
+          );
+        })}
       </div>
     </section>
   );

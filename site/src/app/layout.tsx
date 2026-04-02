@@ -15,10 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-montserrat antialiased">
+      <body className="antialiased">
         <Navbar />
         <ScrollIndicator />
-        <main className="mx-auto max-w-7xl px-6 md:px-10 py-20 sm:py-28 space-y-24 sm:space-y-32">
+        <main className="mx-auto max-w-7xl px-6 md:px-10 pt-20 pb-12 sm:pt-24 sm:pb-16 space-y-8 sm:space-y-10">
           {children}
         </main>
       </body>

@@ -1,17 +1,17 @@
 export const navLinks = [
   { label: "Profile", href: "#profile" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Tech Stack", href: "#skills" },
+  { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const heroContent = {
-  title: "PROJECT BRIEF PORTFOLIO",
-  subtitle: "Cloud-native delivery, secure automation, and Azure-first solutions.",
-  role: "Cloud & DevOps Engineer",
-  updated: "Updated Nov 2025",
+  title: "Devops Portfolio",
+  subtitle: "Building scalable systems from code to cloud.",
+  role: "DevOps & Cloud Engineer",
+  updated: "Updated Apr 2026",
   highlights: [
     "Zero-manual Azure releases",
     "Security-first CI/CD pipelines",
@@ -57,10 +57,10 @@ export const skills = [
 ];
 
 export const stats = [
-  { value: "65%", label: "Faster Releases", hint: "Measured on AKS delivery" },
-  { value: "12+", label: "Azure Services", hint: "Production experience" },
-  { value: "0", label: "Manual Deployments", hint: "Fully automated promos" },
-  { value: "3", label: "Cloud Apps", hint: "Designed end-to-end" },
+  { value: "1+", label: "Years Experience", hint: "Hands-on deployments" },
+  { value: "3", label: "Cloud Platforms", hint: "Azure-first + others" },
+  { value: "10+", label: "Projects Completed", hint: "Production + portfolio" },
+  { value: "19+", label: "Technologies", hint: "Across DevOps + cloud" },
 ];
 
 export const focusAreas = [
@@ -88,6 +88,7 @@ export const interests = [
 export const projects = [
   {
     name: "Cloud-Native DevOps CI/CD Pipeline",
+    category: "DevOps",
     stack:
       "Jenkins · Docker · Kubernetes · Trivy · SonarQube · Nexus · Terraform · AKS · Azure",
     bullets: [
@@ -99,6 +100,7 @@ export const projects = [
   },
   {
     name: "FluxGate — GitOps Blue-Green Deployment Platform",
+    category: "DevOps",
     stack: "Jenkins · Docker · Kubernetes · ArgoCD · SonarQube · Prometheus · Terraform · AKS · Azure",
     bullets: [
       "Built a GitOps-driven blue-green deployment platform enabling safe, zero-downtime traffic switching on Kubernetes.",
@@ -109,37 +111,144 @@ export const projects = [
     link: "https://github.com/Amogh052003/flux-gate",
   },
   {
-    name: "3-Tier Serverless Cloud Architecture (Azure)",
-    stack: "Azure Functions · Azure Static Apps · Azure Blob Storage · FastAPI · Cosmos DB ",
+    name: "Serverless Log Processing Pipeline (AWS)",
+    category: "CloudDevops",
+    stack: "AWS Lambda · S3 · SQS · Lambda · API Gateway · Terraform",
     bullets: [
-      "Delivered a multi-tenant eBook platform with SAS-secured access and serverless APIs.",
-      "Stored assets on Azure Blob Storage and automated front/back deployments through GitHub Actions.",
-      "Leveraged Cosmos DB for tenant data isolation and responsive reading experiences.",
+      "Built a serverless log processing pipeline on AWS using S3-triggered Lambda functions for automated ingestion and processing",
+      "Designed an event-driven architecture with EventBridge and CloudWatch for orchestration, monitoring, and alerting",
+      "Implemented structured log parsing to enable efficient analysis and reduce manual handling.",
     ],
-    link: "https://github.com/Amogh052003/E-book-store",
+    link: "https://github.com/Amogh052003/Serverless-Log-Processing-Pipeline",
   },
+];
+
+export const skillGroups = [
+  {
+    heading: "Cloud & Infrastructure",
+    cards: [
+      {
+        title: "Microsoft Azure",
+        level: "Advanced",
+        items: "Microsoft Azure",
+      },
+      {
+        title: "Hetzner Cloud",
+        level: "Advanced",
+        items: "Hetzner Cloud",
+      },
+      {
+        title: "AWS",
+        level: "Advanced",
+        items: "AWS",
+      },
+    ],
+  },
+  {
+    heading: "Containers & Orchestration",
+    cards: [
+      { title: "Docker", level: "Advanced", items: "Docker" },
+      {
+        title: "Kubernetes",
+        level: "Advanced",
+        items: "k3s, AKS, K8s",
+      },
+      { title: "Helm", level: "Advanced", items: "Helm" },
+    ],
+  },
+  {
+    heading: "Platform Infrastructure",
+    cards: [
+      { title: "Traefik (Ingress)", level: "Advanced", items: "Traefik" },
+      {
+        title: "Cert-Manager",
+        level: "Advanced",
+        items: "Automated TLS",
+      },
+      { title: "Harbor", level: "Advanced", items: "Private Registry" },
+      { title: "Infisical", level: "Advanced", items: "Centralized Secrets" },
+    ],
+  },
+  {
+    heading: "Infrastructure as Code",
+    cards: [
+      { title: "Terraform", level: "Advanced", items: "Terraform" },
+      { title: "Bicep", level: "Advanced", items: "Bicep" },
+    ],
+  },
+  {
+    heading: "CI/CD & GitOps",
+    cards: [
+      { title: "Jenkins", level: "Advanced", items: "Jenkins" },
+      { title: "Argo CD", level: "Advanced", items: "Argo CD" },
+      {
+        title: "GitHub Actions",
+        level: "Advanced",
+        items: "GitHub Actions",
+      },
+      { title: "Woodpecker", level: "Advanced", items: "Woodpecker" },
+    ],
+  },
+  {
+    heading: "Observability & Monitoring",
+    cards: [
+      { title: "Prometheus", level: "Advanced", items: "Prometheus" },
+      { title: "Grafana", level: "Advanced", items: "Grafana" },
+      { title: "Dozzle", level: "Advanced", items: "Dozzle" },
+    ],
+  },
+  {
+    heading: "Configuration Management",
+    cards: [{ title: "Ansible", level: "Advanced", items: "Ansible" }],
+  },
+  {
+    heading: "Programming & Scripting",
+    cards: [
+      {
+        title: "Python (FastAPI)",
+        level: "Advanced",
+        items: "Python (FastAPI)",
+      },
+      {
+        title: "Shell Scripting",
+        level: "Advanced",
+        items: "Shell Scripting",
+      },
+    ],
+  },
+  {
+    heading: "Version Control & OS",
+    cards: [
+      { title: "Git", level: "Advanced", items: "Git" },
+      { title: "Linux", level: "Advanced", items: "Linux" },
+    ],
+  },
+];
+
+export const experienceSkillBars = [
+  { label: "Kubernetes", value: 90 },
+  { label: "CI/CD & GitOps", value: 92 },
+  { label: "Terraform", value: 95 },
+  { label: "Docker", value: 85 },
+  { label: "Azure", value: 85 },
+  { label: "Observability", value: 85 },
+];
+
+export const experienceSummaryBullets = [
+  "Architected and bootstrapped a production-ready Kubernetes cluster on Hetzner Cloud using kubeadm, with automated node provisioning for high availability and rapid scaling.",
+  "Engineered a secure platform infrastructure by deploying Traefik (Ingress), Cert-Manager (Automated TLS), Harbor (Private Registry), and Infisical for centralized secret management.",
+  "Automated the software delivery lifecycle (SDLC) by building CI/CD pipelines that reduced manual intervention for container builds and production deployments.",
 ];
 
 export const experience = [
    {
-    role: "Devops Intern — Synthlane Technologies",
-    period: "Jan 2025 – Mar 2025",
-    logo: "/logos/synthlane.png",
+    role: "DevOps Engineer (Internship) — Synthlane Technologies Pvt. Ltd.",
+    period: "Jan 2026 – March 2026 • Noida / Remote",
     bullets: [
-      "Worked with Kubernetes clusters to deploy and manage containerized applications using Helm charts.",
-      "Built and optimized Docker images using multi-stage builds and distroless images for production workloads.",
-      "Debugged and resolved pod failures, CrashLoopBackOff issues, and cluster scheduling problems.",
-      "Managed secrets and environment configurations using Infisical and GitHub Actions.",
-      "Implemented CI/CD pipelines to build, push, and deploy container images to Kubernetes environments.",
-      "Monitored cluster health and application logs using kubectl and cluster management tools."
-    ],
-  },
-  {
-    role: "Cloud Intern — Rooman Technologies",
-    period: "Dec 2024 – Mar 2025",
-    bullets: [
-      "Completed structured training in cloud technologies, DevOps fundamentals, and deployment practices.",
-      "Gained exposure to Docker, networking, cloud deployments, and automation via guided projects.",
+      "Architected and bootstrapped a production-ready Kubernetes cluster on Hetzner Cloud using kubeadm, implementing automated node provisioning to ensure high availability and rapid scaling.",
+      "Orchestrated multi-service microservices deployments, managing independent lifecycles and deployment configurations for fragmented services rather than monolithic structures.",
+      "Engineered a secure platform infrastructure by deploying and configuring Traefik (Ingress), Cert-Manager (Automated TLS), Harbor (Private Registry), and Infisical for centralized secret management.",
+      "Automated the software delivery lifecycle (SDLC) by building CI/CD pipelines that reduced manual intervention for container builds and production deployments.",
     ],
   },
 ];

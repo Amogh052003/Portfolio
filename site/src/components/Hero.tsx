@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <section
       id="profile"
-      className="scroll-mt-32 grid lg:grid-cols-2 gap-12 items-center min-h-[75vh] lg:min-h-[85vh]"
+      className="scroll-mt-32 grid lg:grid-cols-2 gap-8 items-center min-h-[50vh] lg:min-h-[56vh]"
     >
-      <div className="space-y-8">
+      <div className="space-y-6">
         <RevealSection>
           <p className="font-mono text-sm text-[var(--accent-cyan)]">
-            &gt; {heroContent.updated}
+            $ whoami
           </p>
         </RevealSection>
 
@@ -29,21 +29,27 @@ export default function Hero() {
         </RevealSection>
 
         <RevealSection>
-          <div className="flex flex-wrap gap-3 text-sm">
-            <a href={`mailto:${heroContent.contact.email}`} className="glass px-4 py-2">
-              📧 Email
+          <div className="flex flex-wrap gap-3 items-center">
+            <a href="#projects" className="btn-primary">
+              View Projects
             </a>
-            <a href={heroContent.contact.linkedin} target="_blank" className="glass px-4 py-2">
-              🔗 LinkedIn
+            <a href="#contact" className="btn-outline">
+              Contact Me
             </a>
-            <a href={heroContent.contact.github} target="_blank" className="glass px-4 py-2">
-              🐙 GitHub
+            <a
+              href="/Amogh_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="btn-outline"
+            >
+              Download Resume
             </a>
           </div>
         </RevealSection>
 
         <RevealSection>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-3">
             {stats.map((s) => (
               <div key={s.label} className="glass p-4">
                 <p className="text-2xl glow-text">{s.value}</p>
