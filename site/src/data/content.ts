@@ -57,7 +57,7 @@ export const skills = [
 ];
 
 export const stats = [
-  { value: "1+", label: "Years Experience", hint: "Hands-on deployments" },
+  { value: "<1", label: "Years Experience", hint: "Hands-on deployments" },
   { value: "3", label: "Cloud Platforms", hint: "Azure-first + others" },
   { value: "10+", label: "Projects Completed", hint: "Production + portfolio" },
   { value: "19+", label: "Technologies", hint: "Across DevOps + cloud" },
