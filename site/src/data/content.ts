@@ -121,6 +121,28 @@ export const projects = [
     ],
     link: "https://github.com/Amogh052003/Serverless-Log-Processing-Pipeline",
   },
+  {
+    name: "Service Discovery System with Consul (Microservices + AWS + Docker)",
+    category: "DevOps",
+    stack: "AWS EC2 · Terraform · Docker · Docker Compose · Consul · Flask",
+    bullets: [
+      "Implemented dynamic service discovery using Consul for microservices deployed on AWS with Terraform and Docker.",
+      "Built an API Gateway that routes requests to services registered in Consul without hardcoded IPs.",
+      "Demonstrated containerized microservice architecture with health checks and automatic service registration.",
+    ],
+    link: "https://github.com/Amogh052003/service-discovery-internal",
+  },
+  {
+    name: "E-book Store (Azure-Powered Web App)",
+    category: "CloudDevops",
+    stack: "React · Tailwind CSS · Azure Functions · Python · Azure Blob Storage · Azure Cosmos DB · Azure Static Web Apps · GitHub Actions",
+    bullets: [
+      "Built a serverless e-book store web app on Azure with React frontend and Azure Functions backend.",
+      "Implemented dynamic book management with Azure Blob Storage for PDFs and metadata, and Cosmos DB for user data.",
+      "Integrated user authentication via Azure Static Web Apps and CI/CD with GitHub Actions for automated deployments.",
+    ],
+    link: "https://github.com/Amogh052003/E-book-store",
+  },
 ];
 
 export const skillGroups = [

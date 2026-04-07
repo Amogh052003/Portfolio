@@ -1,7 +1,13 @@
+"use client";
+
 import { projects } from "@/data/content";
 import RevealSection from "@/components/RevealSection";
+import { useState } from "react";
 
 export default function Projects() {
+  const [expanded, setExpanded] = useState(false);
+  const displayedProjects = expanded ? projects : projects.slice(0, 3);
+
   return (
     <section id="projects" className="scroll-mt-32 space-y-8">
       <RevealSection>
@@ -9,7 +15,7 @@ export default function Projects() {
       </RevealSection>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((p) => {
+        {displayedProjects.map((p) => {
           const tags = p.stack
             .split("·")
             .map((t: string) => t.trim())
@@ -66,6 +72,17 @@ export default function Projects() {
           );
         })}
       </div>
+
+      {!expanded && projects.length > 3 && (
+        <div className="text-center">
+          <button
+            onClick={() => setExpanded(true)}
+            className="px-6 py-3 bg-cyan-500/20 border border-cyan-400/30 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition"
+          >
+            Show More Projects
+          </button>
+        </div>
+      )}
     </section>
   );
 }
